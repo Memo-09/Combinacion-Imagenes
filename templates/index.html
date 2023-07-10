@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Arte</title>
+</head>
+<body>
+    <h1>Generador de Arte</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <h2>Imagen de entrada:</h2>
+        <input type="file" name="input_image" accept="image/*"><br><br>
+        <h2>Imagen de estilo:</h2>
+        <input type="file" name="style_image" accept="image/*"><br><br>
+        <input type="submit" value="Generar Arte">
+    </form>
+    {% if result_image %}
+        <h2>Resultado:</h2>
+        <img src="{{ result_image }}" alt="Resultado">
+    {% endif %}
+</body>
+</html>
+
+
+
+
